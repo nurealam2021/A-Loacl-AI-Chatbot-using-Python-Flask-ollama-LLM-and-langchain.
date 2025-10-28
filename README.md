@@ -59,8 +59,8 @@ After successfully Installed the LLM, verify that it’s working properly.
 ---
 
 ```
-# server.py - Flask backend (Python 3.11)
-# backend with Ollama + LangChain + Chroma
+# server.py - Flask backend (Python)
+# backend with Ollama + LangChain + Chromadb
 # -----------------------------
 
 import os
@@ -75,8 +75,7 @@ from langchain_community.llms import Ollama
 from langchain_core.prompts import ChatPromptTemplate
 
 # -----------------------------
-# Config
-# -----------------------------
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "context")
 ALLOWED_EXT = {'pdf'}
@@ -461,12 +460,11 @@ uploadBtn.addEventListener('click', async ()=>{
 ```
 ---
 ## The output should look like this:
----
 <img width="1398" height="1252" alt="image" src="https://github.com/user-attachments/assets/710b49fb-bde1-45f8-8f62-c875a01ecb22" />
 
 ---
 ## Now, set up all dependencies for this project. According to the folder structure, create a text file named requirements.txt under the project folder.
----
+
 /project
 ```
 flask==2.3.2
@@ -501,7 +499,7 @@ PS D:\project> .\venv\Scripts\activate
 ```
 ---
 ---
-## After installing all dependencies with pip install, run the command to read a PDF file.
+## After installing all dependencies with "pip install pypdf", run the command to read a PDF file.
 
 #Read a PDF file
 
@@ -528,12 +526,13 @@ PS D:\project> .\venv\Scripts\activate
 
 ---
 ## Starting Flask server on http://127.0.0.1:5000 ...
----
 <img width="1290" height="317" alt="image" src="https://github.com/user-attachments/assets/d3d3934d-1a49-46cb-9320-a2e6de32320d" />
 
 ---
 ## Now I make a query from my local UI, which is actually my frontend.
----
 <img width="2140" height="640" alt="image" src="https://github.com/user-attachments/assets/903eddaa-3ab9-4605-b572-7742d3d0725c" />
+This local AI provides answers from the PDF files stored in our local /context folder using natural language. As shown in the folder structure above, all PDF files should be well organized for accurate responses.
+
 ---
-======The END=====
+## ======The END=====
+---
