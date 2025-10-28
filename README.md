@@ -489,7 +489,7 @@ python -m venv venv
 PS D:\project> .\venv\Scripts\activate
 ```
 <img width="866" height="31" alt="image" src="https://github.com/user-attachments/assets/700c8147-3162-4258-b72d-1fa56d5cffe3" />
----
+
 
 ## to install all depencys use bellow this command from your terminal.
 ---
